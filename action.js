@@ -1,0 +1,334 @@
+let currentLanguage = localStorage.getItem('language') || 'id';
+
+const translations = {
+    id: {
+        title: "Web Developer",
+        aboutTitle: "Tentang Saya",
+        aboutText: "Saya adalah lulusan Sarjana Ilmu Komputer dengan minat yang mendalam pada pengembangan aplikasi web. Memiliki keterampilan yang kuat dalam pemecahan masalah, kemampuan beradaptasi dengan cepat, serta bekerja dalam tim. Selain itu, saya terbiasa berpikir logis dalam menghadapi tantangan teknis. Pengalaman magang saya sebagai Web Developer memberikan kesempatan untuk mengasah kemampuan teknis serta meningkatkan keterampilan dalam pengembangan aplikasi web secara profesional.",
+        skillsTitle: "Keahlian",
+        skillsData: [
+            { title: "HTML & CSS", desc: "Struktur dan styling web modern" },
+            { title: "JavaScript", desc: "Interaksi dinamis dan logika web" },
+            { title: "PHP", desc: "Pengembangan backend dan server" },
+            { title: "SQL", desc: "Manajemen dan query database" }
+        ],
+        experienceTitle: "Pengalaman Kerja",
+        educationTitle: "Pendidikan",
+        achievementsTitle: "Prestasi",
+        socialTitle: "Koneksi Sosial",
+        contactBtn: "Hubungi Saya",
+        downloadBtn: "Unduh CV",
+        cvFile: "CV_RagaTriagantara.pdf"
+    },
+    en: {
+        title: "Web Developer",
+        aboutTitle: "About Me",
+        aboutText: "I am a Computer Science graduate with a deep interest in web application development. I have strong problem-solving skills, quick adaptability, and teamwork abilities. Additionally, I am accustomed to logical thinking when facing technical challenges. My internship experience as a Web Developer provided me with opportunities to hone technical skills and improve capabilities in professional web application development.",
+        skillsTitle: "Skills",
+        skillsData: [
+            { title: "HTML & CSS", desc: "Modern web structure and styling" },
+            { title: "JavaScript", desc: "Dynamic interaction and web logic" },
+            { title: "PHP", desc: "Backend and server development" },
+            { title: "SQL", desc: "Database management and queries" }
+        ],
+        experienceTitle: "Work Experiences",
+        educationTitle: "Educations",
+        achievementsTitle: "Achievements",
+        socialTitle: "Social Connections",
+        contactBtn: "Contact Me",
+        downloadBtn: "Download CV",
+        cvFile: "CV_RagaTriagantara_EN.pdf"
+    }
+};
+
+function toggleLanguage() {
+    const languageText = document.getElementById('language-text');
+
+    if (currentLanguage === 'id') {
+        currentLanguage = 'en';
+        languageText.innerHTML = '<img src="https://flagcdn.com/id.svg" alt="ID Flag" width="20" style="vertical-align: middle; margin-right: 6px;">ID';
+        updateContent('en');
+    } else {
+        currentLanguage = 'id';
+        languageText.innerHTML = '<img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" style="vertical-align: middle; margin-right: 6px;">EN';
+        updateContent('id');
+    }
+
+    localStorage.setItem('language', currentLanguage);
+}
+
+function updateContent(lang) {
+    const content = translations[lang];
+
+    // Update title
+    document.querySelector('.title').textContent = content.title;
+
+    // Update about section
+    document.querySelector('.glass-card:nth-child(2) .section-title').textContent = content.aboutTitle;
+    document.querySelector('.glass-card:nth-child(2) p').textContent = content.aboutText;
+
+    // Update skills section
+    document.querySelector('.glass-card:nth-child(3) .section-title').textContent = content.skillsTitle;
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach((item, index) => {
+        if (content.skillsData[index]) {
+            item.querySelector('h3').textContent = content.skillsData[index].title;
+            item.querySelector('p').textContent = content.skillsData[index].desc;
+        }
+    });
+
+    // Update section titles
+    document.querySelector('.glass-card:nth-child(4) .section-title').textContent = content.experienceTitle;
+    document.querySelector('.glass-card:nth-child(5) .section-title').textContent = content.educationTitle;
+    document.querySelector('.glass-card:nth-child(6) .section-title').textContent = content.achievementsTitle;
+    document.querySelector('.glass-card:nth-child(7) .section-title').textContent = content.socialTitle;
+
+    // Update buttons
+    document.querySelector('.btn-primary').textContent = content.contactBtn;
+    document.querySelector('.btn-secondary').textContent = content.downloadBtn;
+
+    // Update experience content for English
+    if (lang === 'en') {
+        const experiences = document.querySelectorAll('.experience-item');
+        if (experiences[0]) {
+            experiences[0].querySelector('.experience-title').textContent = 'Freelance Web Developer';
+            experiences[0].querySelector('.experience-company').textContent = 'Devasana Nirmata Isvara';
+            experiences[0].querySelector('p').textContent = 'Built and developed a website with ticket booking features for Fashion Show events held at Bandung Convention Centre. The website was designed with an intuitive user experience, online booking capabilities, and secure payment systems.';
+        }
+        if (experiences[1]) {
+            experiences[1].querySelector('.experience-date').textContent = 'July 2023 – February 2024';
+            experiences[1].querySelector('.experience-title').textContent = 'Web Developer Internship';
+            experiences[1].querySelector('.experience-company').textContent = 'Tanjung Duren Selatan Subdistrict ';
+            experiences[1].querySelector('p').textContent = 'Created and developed a district office website to facilitate access to information and public services transparently and efficiently. Improved work efficiency with an integrated platform for data management and inter-departmental coordination.';
+        }
+        if (experiences[2]) {
+            experiences[2].querySelector('.experience-date').textContent = 'September 2022 – July 2023';
+            experiences[2].querySelector('.experience-title').textContent = 'Internship';
+            experiences[2].querySelector('.experience-company').textContent = 'Entrepreneurship Bureau Mercu Buana University';
+            experiences[2].querySelector('p').textContent = 'Provided work support to unit colleagues and supported every event from the UMB Entrepreneurship Bureau unit.';
+        }
+
+        // Update education content for English
+        const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        if (educationItems[0]) {
+            educationItems[0].querySelector('.experience-title').textContent = 'Bachelor of Informatics Engineering';
+            educationItems[0].querySelector('.experience-company').textContent = 'Mercu Buana University, West Jakarta';
+        }
+        if (educationItems[1]) {
+            educationItems[1].querySelector('.experience-title').textContent = 'Senior High School';
+            educationItems[1].querySelector('.experience-company').textContent = 'SMA Negeri 85, West Jakarta';
+        }
+        if (educationItems[2]) {
+            educationItems[2].querySelector('.experience-title').textContent = 'Junior High School';
+            educationItems[2].querySelector('.experience-company').textContent = 'SMP Negeri 206, West Jakarta';
+        }
+        if (educationItems[3]) {
+            educationItems[3].querySelector('.experience-title').textContent = 'Elementary School';
+            educationItems[3].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, West Jakarta';
+        }
+
+        // Update achievements content for English
+        const achievementItems = document.querySelectorAll('.achievement-item');
+        if (achievementItems[0]) {
+            achievementItems[0].querySelector('.achievement-title').textContent = 'Student Entrepreneurship Development Program (P2MW)';
+            achievementItems[0].querySelector('p').textContent = 'Recipient of P2MW funding 2023 Initial Stage Digital Business Category with business name "Acaverse SIA Mobile".';
+        }
+        if (achievementItems[1]) {
+            achievementItems[1].querySelector('.achievement-title').textContent = 'Student Creativity Program (PKM)';
+            achievementItems[1].querySelector('p').textContent = 'Recipient of PKMAI incentive 2023 with research on K-Nearest Neighbor algorithm optimization for breast cancer prediction.';
+        }
+        if (achievementItems[2]) {
+            achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
+            achievementItems[2].querySelector('p').textContent = 'Participant in Gemastik XV User Experience Design field 2022.';
+        }
+        if (achievementItems[3]) {
+            achievementItems[3].querySelector('.achievement-title').textContent = 'Student Creativity Program (PKM)';
+            achievementItems[3].querySelector('p').textContent = 'Participant in PKM-AI 2024 with research on "Fear of Missing Out (FOMO) Misuse of Social Media".';
+        }
+    } else {
+        // Restore Indonesian content
+        const experiences = document.querySelectorAll('.experience-item');
+        if (experiences[0]) {
+            experiences[0].querySelector('.experience-title').textContent = 'Freelance Web Developer';
+            experiences[0].querySelector('.experience-company').textContent = 'Devasana Nirmata Isvara';
+            experiences[0].querySelector('p').textContent = 'Membangun dan mengembangkan situs web dengan fitur pemesanan tiket untuk acara Fashion Show yang diselenggarakan di Bandung Convention Centre. Website dirancang dengan pengalaman pengguna yang intuitif, kemampuan pemesanan online, dan sistem pembayaran yang aman.';
+        }
+        if (experiences[1]) {
+            experiences[1].querySelector('.experience-date').textContent = 'Juli 2023 – Februari 2024';
+            experiences[1].querySelector('.experience-title').textContent = 'Magang Web Developer';
+            experiences[1].querySelector('.experience-company').textContent = 'Kelurahan Tanjung Duren Selatan';
+            experiences[1].querySelector('p').textContent = 'Membuat dan mengembangkan website Kelurahan untuk mempermudah akses informasi dan pelayanan publik secara transparan dan efisien. Meningkatkan efisiensi kerja dengan platform terintegrasi untuk pengelolaan data dan koordinasi antar bagian.';
+        }
+        if (experiences[2]) {
+            experiences[2].querySelector('.experience-date').textContent = 'September 2022 – Juli 2023';
+            experiences[2].querySelector('.experience-title').textContent = 'Magang';
+            experiences[2].querySelector('.experience-company').textContent = 'Biro Kewirausahaan UMB';
+            experiences[2].querySelector('p').textContent = 'Melakukan support pekerjaan pada rekan satu unit, dan memberikan dukungan untuk setiap event dari unit Biro Kewirausahaan UMB.';
+        }
+
+        // Restore Indonesian education content
+        const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        if (educationItems[0]) {
+            educationItems[0].querySelector('.experience-title').textContent = 'Sarjana Teknik Informatika';
+            educationItems[0].querySelector('.experience-company').textContent = 'Universitas Mercu Buana, Jakarta Barat';
+        }
+        if (educationItems[1]) {
+            educationItems[1].querySelector('.experience-title').textContent = 'Sekolah Menengah Atas';
+            educationItems[1].querySelector('.experience-company').textContent = 'SMA Negeri 85, Jakarta Barat';
+        }
+        if (educationItems[2]) {
+            educationItems[2].querySelector('.experience-title').textContent = 'Sekolah Menengah Pertama';
+            educationItems[2].querySelector('.experience-company').textContent = 'SMP Negeri 206, Jakarta Barat';
+        }
+        if (educationItems[3]) {
+            educationItems[3].querySelector('.experience-title').textContent = 'Sekolah Dasar';
+            educationItems[3].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, Jakarta Barat';
+        }
+
+        // Restore Indonesian achievements content
+        const achievementItems = document.querySelectorAll('.achievement-item');
+        if (achievementItems[0]) {
+            achievementItems[0].querySelector('.achievement-title').textContent = 'Program Pembinaan Mahasiswa Wirausaha (P2MW)';
+            achievementItems[0].querySelector('p').textContent = 'Peraih pendanaan P2MW Tahun 2023 Tahapan Awal Kategori Bisnis Digital dengan nama usaha "Acaverse SIA Mobile".';
+        }
+        if (achievementItems[1]) {
+            achievementItems[1].querySelector('.achievement-title').textContent = 'Program Kreativitas Mahasiswa (PKM)';
+            achievementItems[1].querySelector('p').textContent = 'Peraih insentif bidang PKMAI Tahun 2023 dengan penelitian tentang optimalisasi algoritma K-Nearest Neighbor untuk prediksi kanker payudara.';
+        }
+        if (achievementItems[2]) {
+            achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
+            achievementItems[2].querySelector('p').textContent = 'Peserta Gemastik XV bidang Desain Pengalaman Pengguna tahun 2022.';
+        }
+        if (achievementItems[3]) {
+            achievementItems[3].querySelector('.achievement-title').textContent = 'Program Kreativitas Mahasiswa (PKM)';
+            achievementItems[3].querySelector('p').textContent = 'Peserta PKM-AI Tahun 2024 dengan penelitian tentang "Fear of Missing Out (FOMO) Misuse of Social Media".';
+        }
+    }
+}
+// Toggle light/dark theme using Font Awesome icons
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const themeIcon = document.getElementById('theme-icon');
+
+    if (savedTheme === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        themeIcon?.classList.remove('fa-moon');
+        themeIcon?.classList.add('fa-sun');
+    } else {
+        document.body.removeAttribute('data-theme');
+        themeIcon?.classList.remove('fa-sun');
+        themeIcon?.classList.add('fa-moon');
+    }
+}
+
+function loadLanguage() {
+    const savedLanguage = localStorage.getItem('language');
+    const languageText = document.getElementById('language-text');
+
+    if (savedLanguage === 'en') {
+        currentLanguage = 'en';
+        languageText.textContent = '🇮🇩 ID';
+        updateContent('en');
+    } else {
+        currentLanguage = 'id';
+        languageText.textContent = '🇺🇸 EN';
+        updateContent('id');
+    }
+}
+
+// Download CV Function
+function downloadCV() {
+    const content = translations[currentLanguage];
+    const cvFileName = content.cvFile;
+
+    // Create a temporary anchor element to trigger download
+    const a = document.createElement('a');
+    a.href = cvFileName;
+    a.download = cvFileName;
+    a.target = '_blank';
+
+    // Add to document, click, and remove
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Optional: Show a message if file is not found
+    setTimeout(() => {
+        console.log('CV download initiated for ' + currentLanguage);
+    }, 100);
+}
+
+// Theme Toggle
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+    loadTheme();  
+    loadLanguage();
+
+    const languageText = document.getElementById('language-text');
+    languageText.innerHTML =
+        currentLanguage === 'en'
+        ? '<img src="https://flagcdn.com/id.svg" alt="ID Flag" width="20" style="vertical-align: middle; margin-right: 6px;">ID'
+        : '<img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" style="vertical-align: middle; margin-right: 6px;">EN';
+
+    // Observe all glass cards for animation
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+
+// Add parallax effect
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallax = document.querySelector('body');
+    const speed = scrolled * 0.5;
+
+    parallax.style.backgroundPosition = `center ${speed}px`;
+});
