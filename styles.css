@@ -340,6 +340,11 @@ body {
     margin-top: 30px;
 }
 
+#gpa-content {
+    margin-left: 0;
+    align-self: flex-start;
+}
+
 .btn {
     padding: 15px 30px;
     border: none;
@@ -389,6 +394,7 @@ button {
   user-select: none;
   touch-action: manipulation;
 }
+
 
 .social-links {
     display: flex;
@@ -537,4 +543,8 @@ a:focus {
 
 .fade-in-5 {
     animation-delay: 1s;
+}
+
+.fade-in-6 {
+    animation-delay: 1.2s;
 }
