@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raga Triagantara - Web Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./action.js"></script>
+</head>
+
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </div>
+
+    <div class="language-toggle" onclick="toggleLanguage()">
+        <span id="language-text">
+            '<img src="https://flagcdn.com/id.svg" alt="ID Flag" width="20"
+                style="vertical-align: middle; margin-right: 6px;">ID'
+        </span>
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="glass-card header">
+            <div class="profile-img">
+                <img src="./assets/PasFoto_RagaTriagantara.jpg" alt="Raga Triagantara"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='RT';">
+            </div>
+            <h1 class="name">Raga Triagantara</h1>
+            <p class="title">Web Developer</p>
+            <div class="contact-info">
+                <a href="https://www.google.com/maps/place/6%C2%B013'56.4%22S+106%C2%B040'56.7%22E/@-6.2323323,106.6798281,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.2323323!4d106.682403?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Tangerang Selatan
+                    </div>
+                </a>
+                <div class="contact-item"><i class="fab fa-whatsapp"></i> +62-822-1893-0675</div>
+                <div class="contact-item"><i class="fa-solid fa-envelope"></i> ragatriagantara@gmail.com</div>
+            </div>
+
+            <div class="buttons">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ragatriagantara@gmail.com"
+                    class="btn btn-primary"">Hubungi Saya</a>
+                <button 
+                    class=" btn btn-secondary" onclick="downloadCV()">
+                    Download CV
+                </button>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="glass-card fade-in">
+            <h2 class="section-title">Tentang Saya</h2>
+            <p>Saya adalah lulusan Sarjana Ilmu Komputer dengan minat yang mendalam pada pengembangan aplikasi web.
+                Memiliki keterampilan yang kuat dalam pemecahan masalah, kemampuan beradaptasi dengan cepat, serta
+                bekerja dalam tim. Selain itu, saya terbiasa berpikir logis dalam menghadapi tantangan teknis.
+                Pengalaman magang saya sebagai Web Developer memberikan kesempatan untuk mengasah kemampuan teknis serta
+                meningkatkan keterampilan dalam pengembangan aplikasi web secara profesional.</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="glass-card fade-in-2">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fa-brands fa-html5 skill-icon"></i>
+                    <h3>HTML & CSS</h3>
+                    <p>Struktur dan styling web modern</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-brands fa-js skill-icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interaksi dinamis dan logika web</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-brands fa-php skill-icon"></i>
+                    <h3>PHP</h3>
+                    <p>Pengembangan backend dan server</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fa-solid fa-database skill-icon"></i>
+                    <h3>SQL</h3>
+                    <p>Manajemen dan query database</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="glass-card fade-in-3">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            <div class="experience-item">
+                <div class="experience-date">September 2024 – November 2024</div>
+                <div class="experience-title">Freelance Web Developer</div>
+                <div class="experience-company">Devasana Nirmata Isvara</div>
+                <p>Membangun dan mengembangkan situs web dengan fitur pemesanan tiket untuk acara Fashion Show yang
+                    diselenggarakan di Bandung Convention Centre. Website dirancang dengan pengalaman pengguna yang
+                    intuitif, kemampuan pemesanan online, dan sistem pembayaran yang aman.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">Juli 2023 – Februari 2024</div>
+                <div class="experience-title">Magang Web Developer</div>
+                <div class="experience-company">Kelurahan Tanjung Duren Selatan</div>
+                <p>Membuat dan mengembangkan website Kelurahan untuk mempermudah akses informasi dan pelayanan publik
+                    secara transparan dan efisien. Meningkatkan efisiensi kerja dengan platform terintegrasi untuk
+                    pengelolaan data dan koordinasi antar bagian.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">September 2022 – Juli 2023</div>
+                <div class="experience-title">Magang</div>
+                <div class="experience-company">Biro Kewirausahaan UMB</div>
+                <p>Melakukan support pekerjaan pada rekan satu unit, dan memberikan dukungan untuk setiap event dari
+                    unit Biro Kewirausahaan UMB.</p>
+            </div>
+        </div>
+
+        <!-- Collage Section -->
+        <div class="glass-card fade-in-4">
+            <h2 class="section-title">Kampus</h2>
+            <div class="experience-item">
+                <div class="experience-date">September 2021 – Februari 2025</div>
+                <div class="experience-title">Sarjana Teknik Informatika</div>
+                <div class="experience-company">Universitas Mercu Buana, Jakarta Barat</div>
+                <p>"Implementasi Hybrid GWO-SCA Dengan Support Vector Machine Dan K-Nearest Neighbor Untuk
+                    Mengklasifikasi Indeks Polusi Udara Provinsi DKI Jakarta" <br> Lulus 7 Semester (3,5 Tahun)
+                </p>
+                <div class="buttons">
+                    <a href="#GPA" id="gpa-content" class="btn btn-primary">
+                        IPK 3,76
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="glass-card fade-in-5">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="experience-item">
+                <div class="experience-date">2018 – 2021</div>
+                <div class="experience-title">Sekolah Menengah Atas</div>
+                <div class="experience-company">SMA Negeri 85, Jakarta Barat</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2015 – 2018</div>
+                <div class="experience-title">Sekolah Menengah Pertama</div>
+                <div class="experience-company">SMP Negeri 206, Jakarta Barat</div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-date">2009 – 2015</div>
+                <div class="experience-title">Sekolah Dasar</div>
+                <div class="experience-company">SDN Meruya Selatan 03 Pagi, Jakarta Barat</div>
+            </div>
+        </div>
+
+        <!-- Achievements Section -->
+        <div class="glass-card fade-in-6">
+            <h2 class="section-title">Prestasi</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <div class="achievement-date">Desember 2023</div>
+                    <div class="achievement-title">Program Pembinaan Mahasiswa Wirausaha (P2MW)</div>
+                    <p>Peraih pendanaan P2MW Tahun 2023 Tahapan Awal Kategori Bisnis Digital dengan nama usaha "Acaverse
+                        SIA Mobile".</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">November 2023</div>
+                    <div class="achievement-title">Program Kreativitas Mahasiswa (PKM)</div>
+                    <p>Peraih insentif bidang PKMAI Tahun 2023 dengan penelitian tentang optimalisasi algoritma
+                        K-Nearest Neighbor untuk prediksi kanker payudara.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">November 2022</div>
+                    <div class="achievement-title">Gemastik XV</div>
+                    <p>Peserta Gemastik XV bidang Desain Pengalaman Pengguna tahun 2022.</p>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-date">November 2024</div>
+                    <div class="achievement-title">Program Kreativitas Mahasiswa (PKM)</div>
+                    <p>Peserta PKMAI Tahun 2024 dengan penelitian tentang "Fear of Missing Out (FOMO) Misuse of Social
+                        Media".</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="glass-card">
+            <h2 class="section-title">Koneksi Sosial</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/raga-triagantara-20080b215/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ragatriagantara@gmail.com" class="social-link">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/6282218930675" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
