@@ -117,7 +117,7 @@ function updateContent(lang) {
             collegeItems[0].querySelector('.experience-date').textContent = 'September 2021 – February 2025';
             collegeItems[0].querySelector('.experience-title').textContent = 'Bachelor of Informatics Engineering';
             collegeItems[0].querySelector('.experience-company').textContent = 'Mercu Buana University, West Jakarta';
-            collegeItems[0].querySelector('p').innerHTML = '"Implementation of Hybrid GWO-SCA with Support Vector Machineand K-Nearest Neighbor for Classifying Air Pollution Indexin DKI Jakarta Province" <br><br> Graduated 7 Semesters (3.5 Years)';
+            collegeItems[0].querySelector('p').innerHTML = '"Implementation of Hybrid GWO-SCA with Support Vector Machine and K-Nearest Neighbor for Classifying Air Pollution Index in DKI Jakarta Province" <br><br> Graduated 7 Semesters (3.5 Years)';
             collegeItems[0].querySelector('#gpa-content').textContent = 'GPA 3.76';
         }
 
