@@ -111,6 +111,7 @@ function updateContent(lang) {
         // Update education content for English
         const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
         if (educationItems[0]) {
+            educationItems[0].querySelector('.experience-date').textContent = 'September 2021 – February 2025';
             educationItems[0].querySelector('.experience-title').textContent = 'Bachelor of Informatics Engineering';
             educationItems[0].querySelector('.experience-company').textContent = 'Mercu Buana University, West Jakarta';
         }
@@ -169,6 +170,7 @@ function updateContent(lang) {
         // Restore Indonesian education content
         const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
         if (educationItems[0]) {
+            educationItems[0].querySelector('.experience-date').textContent = 'September 2021 – Februari 2025';
             educationItems[0].querySelector('.experience-title').textContent = 'Sarjana Teknik Informatika';
             educationItems[0].querySelector('.experience-company').textContent = 'Universitas Mercu Buana, Jakarta Barat';
         }
