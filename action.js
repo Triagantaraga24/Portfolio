@@ -13,6 +13,7 @@ const translations = {
             { title: "SQL", desc: "Manajemen dan query database" }
         ],
         experienceTitle: "Pengalaman Kerja",
+        collegeTitle: "Kampus",
         educationTitle: "Pendidikan",
         achievementsTitle: "Prestasi",
         socialTitle: "Koneksi Sosial",
@@ -32,6 +33,7 @@ const translations = {
             { title: "SQL", desc: "Database management and queries" }
         ],
         experienceTitle: "Work Experiences",
+        collegeTitle: "College",
         educationTitle: "Educations",
         achievementsTitle: "Achievements",
         socialTitle: "Social Connections",
@@ -79,9 +81,10 @@ function updateContent(lang) {
 
     // Update section titles
     document.querySelector('.glass-card:nth-child(4) .section-title').textContent = content.experienceTitle;
-    document.querySelector('.glass-card:nth-child(5) .section-title').textContent = content.educationTitle;
-    document.querySelector('.glass-card:nth-child(6) .section-title').textContent = content.achievementsTitle;
-    document.querySelector('.glass-card:nth-child(7) .section-title').textContent = content.socialTitle;
+    document.querySelector('.glass-card:nth-child(5) .section-title').textContent = content.collegeTitle;
+    document.querySelector('.glass-card:nth-child(6) .section-title').textContent = content.educationTitle;
+    document.querySelector('.glass-card:nth-child(7) .section-title').textContent = content.achievementsTitle;
+    document.querySelector('.glass-card:nth-child(8) .section-title').textContent = content.socialTitle;
 
     // Update buttons
     document.querySelector('.btn-primary').textContent = content.contactBtn;
@@ -105,27 +108,32 @@ function updateContent(lang) {
             experiences[2].querySelector('.experience-date').textContent = 'September 2022 – July 2023';
             experiences[2].querySelector('.experience-title').textContent = 'Internship';
             experiences[2].querySelector('.experience-company').textContent = 'Entrepreneurship Bureau Mercu Buana University';
-            experiences[2].querySelector('p').textContent = 'Provided work support to unit colleagues and supported every event from the UMB Entrepreneurship Bureau unit.';
+            experiences[2].querySelector('p').textContent = 'Provided work support to unit colleagues and supported every event from the Entrepreneurship Bureau Mercu Buana University unit.';
+        }
+
+        // Update college content for English
+        const collegeItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        if (collegeItems[0]) {
+            collegeItems[0].querySelector('.experience-date').textContent = 'September 2021 – February 2025';
+            collegeItems[0].querySelector('.experience-title').textContent = 'Bachelor of Informatics Engineering';
+            collegeItems[0].querySelector('.experience-company').textContent = 'Mercu Buana University, West Jakarta';
+            collegeItems[0].querySelector('p').innerHTML = '"Implementation of Hybrid GWO-SCA with Support Vector Machineand K-Nearest Neighbor for Classifying Air Pollution Indexin DKI Jakarta Province" <br><br> Graduated 7 Semesters (3.5 Years)';
+            collegeItems[0].querySelector('#gpa-content').textContent = 'GPA 3.76';
         }
 
         // Update education content for English
-        const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        const educationItems = document.querySelectorAll('.glass-card:nth-child(6) .experience-item');
         if (educationItems[0]) {
-            educationItems[0].querySelector('.experience-date').textContent = 'September 2021 – February 2025';
-            educationItems[0].querySelector('.experience-title').textContent = 'Bachelor of Informatics Engineering';
-            educationItems[0].querySelector('.experience-company').textContent = 'Mercu Buana University, West Jakarta';
+            educationItems[0].querySelector('.experience-title').textContent = 'Senior High School';
+            educationItems[0].querySelector('.experience-company').textContent = 'SMA Negeri 85, West Jakarta';
         }
         if (educationItems[1]) {
-            educationItems[1].querySelector('.experience-title').textContent = 'Senior High School';
-            educationItems[1].querySelector('.experience-company').textContent = 'SMA Negeri 85, West Jakarta';
+            educationItems[1].querySelector('.experience-title').textContent = 'Junior High School';
+            educationItems[1].querySelector('.experience-company').textContent = 'SMP Negeri 206, West Jakarta';
         }
         if (educationItems[2]) {
-            educationItems[2].querySelector('.experience-title').textContent = 'Junior High School';
-            educationItems[2].querySelector('.experience-company').textContent = 'SMP Negeri 206, West Jakarta';
-        }
-        if (educationItems[3]) {
-            educationItems[3].querySelector('.experience-title').textContent = 'Elementary School';
-            educationItems[3].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, West Jakarta';
+            educationItems[2].querySelector('.experience-title').textContent = 'Elementary School';
+            educationItems[2].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, West Jakarta';
         }
 
         // Update achievements content for English
@@ -136,7 +144,7 @@ function updateContent(lang) {
         }
         if (achievementItems[1]) {
             achievementItems[1].querySelector('.achievement-title').textContent = 'Student Creativity Program (PKM)';
-            achievementItems[1].querySelector('p').textContent = 'Recipient of PKMAI incentive 2023 with research on K-Nearest Neighbor algorithm optimization for breast cancer prediction.';
+            achievementItems[1].querySelector('p').textContent = 'Recipient of PKM-AI incentive 2023 with research on K-Nearest Neighbor algorithm optimization for breast cancer prediction.';
         }
         if (achievementItems[2]) {
             achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
@@ -163,28 +171,33 @@ function updateContent(lang) {
         if (experiences[2]) {
             experiences[2].querySelector('.experience-date').textContent = 'September 2022 – Juli 2023';
             experiences[2].querySelector('.experience-title').textContent = 'Magang';
-            experiences[2].querySelector('.experience-company').textContent = 'Biro Kewirausahaan UMB';
-            experiences[2].querySelector('p').textContent = 'Melakukan support pekerjaan pada rekan satu unit, dan memberikan dukungan untuk setiap event dari unit Biro Kewirausahaan UMB.';
+            experiences[2].querySelector('.experience-company').textContent = 'Biro Kewirausahaan Universitas Mercu Buana';
+            experiences[2].querySelector('p').textContent = 'Melakukan support pekerjaan pada rekan satu unit, dan memberikan dukungan untuk setiap event dari unit Biro Kewirausahaan Universitas Mercu Buana.';
+        }
+
+        // Restore Indonesian college content
+        const collegeItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        if (collegeItems[0]) {
+            collegeItems[0].querySelector('.experience-date').textContent = 'September 2021 – Februari 2025';
+            collegeItems[0].querySelector('.experience-title').textContent = 'Sarjana Teknik Informatika';
+            collegeItems[0].querySelector('.experience-company').textContent = 'Universitas Mercu Buana, Jakarta Barat';
+            collegeItems[0].querySelector('p').innerHTML = '"Implementasi Hybrid GWO-SCA Dengan Support Vector Machine Dan K-Nearest Neighbor Untuk Mengklasifikasi Indeks Polusi Udara Provinsi DKI Jakarta" <br><br> Lulus 7 Semester (3,5 Tahun)';
+            collegeItems[0].querySelector('#gpa-content').textContent = 'IPK 3,76';
         }
 
         // Restore Indonesian education content
-        const educationItems = document.querySelectorAll('.glass-card:nth-child(5) .experience-item');
+        const educationItems = document.querySelectorAll('.glass-card:nth-child(6) .experience-item');
         if (educationItems[0]) {
-            educationItems[0].querySelector('.experience-date').textContent = 'September 2021 – Februari 2025';
-            educationItems[0].querySelector('.experience-title').textContent = 'Sarjana Teknik Informatika';
-            educationItems[0].querySelector('.experience-company').textContent = 'Universitas Mercu Buana, Jakarta Barat';
+            educationItems[0].querySelector('.experience-title').textContent = 'Sekolah Menengah Atas';
+            educationItems[0].querySelector('.experience-company').textContent = 'SMA Negeri 85, Jakarta Barat';
         }
         if (educationItems[1]) {
-            educationItems[1].querySelector('.experience-title').textContent = 'Sekolah Menengah Atas';
-            educationItems[1].querySelector('.experience-company').textContent = 'SMA Negeri 85, Jakarta Barat';
+            educationItems[1].querySelector('.experience-title').textContent = 'Sekolah Menengah Pertama';
+            educationItems[1].querySelector('.experience-company').textContent = 'SMP Negeri 206, Jakarta Barat';
         }
         if (educationItems[2]) {
-            educationItems[2].querySelector('.experience-title').textContent = 'Sekolah Menengah Pertama';
-            educationItems[2].querySelector('.experience-company').textContent = 'SMP Negeri 206, Jakarta Barat';
-        }
-        if (educationItems[3]) {
-            educationItems[3].querySelector('.experience-title').textContent = 'Sekolah Dasar';
-            educationItems[3].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, Jakarta Barat';
+            educationItems[2].querySelector('.experience-title').textContent = 'Sekolah Dasar';
+            educationItems[2].querySelector('.experience-company').textContent = 'SDN Meruya Selatan 03 Pagi, Jakarta Barat';
         }
 
         // Restore Indonesian achievements content
@@ -195,7 +208,7 @@ function updateContent(lang) {
         }
         if (achievementItems[1]) {
             achievementItems[1].querySelector('.achievement-title').textContent = 'Program Kreativitas Mahasiswa (PKM)';
-            achievementItems[1].querySelector('p').textContent = 'Peraih insentif bidang PKMAI Tahun 2023 dengan penelitian tentang optimalisasi algoritma K-Nearest Neighbor untuk prediksi kanker payudara.';
+            achievementItems[1].querySelector('p').textContent = 'Peraih insentif bidang PKM-AI Tahun 2023 dengan penelitian tentang optimalisasi algoritma K-Nearest Neighbor untuk prediksi kanker payudara.';
         }
         if (achievementItems[2]) {
             achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
@@ -296,14 +309,14 @@ const observer = new IntersectionObserver((entries) => {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    loadTheme();  
+    loadTheme();
     loadLanguage();
 
     const languageText = document.getElementById('language-text');
     languageText.innerHTML =
         currentLanguage === 'en'
-        ? '<img src="https://flagcdn.com/id.svg" alt="ID Flag" width="20" style="vertical-align: middle; margin-right: 6px;">ID'
-        : '<img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" style="vertical-align: middle; margin-right: 6px;">EN';
+            ? '<img src="https://flagcdn.com/id.svg" alt="ID Flag" width="20" style="vertical-align: middle; margin-right: 6px;">ID'
+            : '<img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" style="vertical-align: middle; margin-right: 6px;">EN';
 
     // Observe all glass cards for animation
     const cards = document.querySelectorAll('.glass-card');
