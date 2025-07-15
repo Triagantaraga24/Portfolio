@@ -376,6 +376,20 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+button {
+  font-family: 'Roboto Mono', monospace, 'Courier New', Courier, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
