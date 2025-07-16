@@ -185,7 +185,7 @@ body {
 .sidebar-toggle {
     position: absolute;
     top: 1rem;
-    right: -16px;
+    right: 15px;
     background: var(--bg-primary);
     box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
     border-radius: 50%;
