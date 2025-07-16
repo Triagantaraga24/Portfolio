@@ -14,7 +14,8 @@ function openImageModal(src) {
 
 const translations = {
     id: {
-        title: "Web Developer",
+        title: "Pengembang Web",
+        address: "Tangerang Selatan",
         aboutTitle: "Tentang Saya",
         aboutText: "Saya adalah lulusan Sarjana Ilmu Komputer dengan minat yang mendalam pada pengembangan aplikasi web. Memiliki keterampilan yang kuat dalam pemecahan masalah, kemampuan beradaptasi dengan cepat, serta bekerja dalam tim. Selain itu, saya terbiasa berpikir logis dalam menghadapi tantangan teknis. Pengalaman magang saya sebagai Web Developer memberikan kesempatan untuk mengasah kemampuan teknis serta meningkatkan keterampilan dalam pengembangan aplikasi web secara profesional.",
         skillsTitle: "Keahlian",
@@ -35,6 +36,7 @@ const translations = {
     },
     en: {
         title: "Web Developer",
+        address: "South Tangerang",
         aboutTitle: "About Me",
         aboutText: "I am a Computer Science graduate with a deep interest in web application development. I have strong problem-solving skills, quick adaptability, and teamwork abilities. Additionally, I am accustomed to logical thinking when facing technical challenges. My internship experience as a Web Developer provided me with opportunities to hone technical skills and improve capabilities in professional web application development.",
         skillsTitle: "Skills",
@@ -76,6 +78,7 @@ function updateContent(lang) {
 
     // Update title
     document.querySelector('.title').textContent = content.title;
+    document.querySelector('.contact-item').textContent = content.address;
 
     // Update about section
     document.querySelector('.glass-card:nth-child(2) .section-title').textContent = content.aboutTitle;
