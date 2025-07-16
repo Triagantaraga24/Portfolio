@@ -862,6 +862,13 @@ a:focus {
     }
 }
 
+@media (max-width: 400px) {
+    .contact-item {
+        font-size: 0.9em;
+        margin-right: 4px;
+    }
+}
+
 .fade-in {
     animation-delay: 0.2s;
 }
