@@ -91,11 +91,17 @@ h6 {
 }
 
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto', sans-serif;
     background: var(--bg-primary);
     min-height: 100vh;
     color: var(--text-primary);
     transition: all 0.3s ease;
+}
+
+.section-title,
+.title,
+.sidebar-logo {
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Tombol toggle khusus mobile */
@@ -497,6 +503,7 @@ body {
 }
 
 .skill-item {
+    font-family: 'Roboto Mono', monospace;
     background: var(--bg-primary);
     padding: 20px;
     border-radius: 15px;
@@ -592,7 +599,6 @@ body {
     text-align: center;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
-    font-family: 'Roboto Mono', monospace;
 }
 
 .btn:focus {
@@ -645,7 +651,6 @@ body {
 }
 
 button {
-    font-family: 'Roboto Mono', monospace, 'Courier New', Courier, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: inherit;
