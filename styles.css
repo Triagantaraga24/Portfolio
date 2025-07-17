@@ -634,8 +634,6 @@ body {
     box-shadow:
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
-    transform: translateY(-2px);
-    transition: all 0.2s ease; 
 }
 
 .btn-secondary:hover {
@@ -650,16 +648,6 @@ body {
     box-shadow:
         inset 4px 4px 8px var(--shadow-inset-dark),
         inset -4px -4px 8px var(--shadow-inset-light);
-}
-
-.btn-secondary:focus:not(:active) {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    box-shadow:
-        8px 8px 16px var(--shadow-dark),
-        -8px -8px 16px var(--shadow-light);
-    transform: translateY(-2px);
-    transition: all 0.2s ease;
 }
 
 button {
@@ -782,12 +770,7 @@ input[type="button"] {
 button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
-input[type="button"]:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* Remove focus from links */
+input[type="button"]:focus,
 a:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -796,13 +779,6 @@ a:focus {
 /* Remove focus from any clickable element */
 [tabindex]:focus {
     outline: none !important;
-}
-
-/* Pressed state for neomorphic elements */
-.glass-card:active {
-    box-shadow:
-        inset 6px 6px 12px var(--shadow-inset-dark),
-        inset -6px -6px 12px var(--shadow-inset-light);
 }
 
 @media (max-width: 768px) {
@@ -922,8 +898,4 @@ a:focus {
 
 .fade-in-6 {
     animation-delay: 1.2s;
-}
-
-.fade-in-7 {
-    animation-delay: 1.4s;
 }
