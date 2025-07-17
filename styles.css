@@ -653,10 +653,13 @@ body {
 }
 
 .btn-secondary:focus:not(:active) {
-    transform: translateY(-2px);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     box-shadow:
         8px 8px 16px var(--shadow-dark),
         -8px -8px 16px var(--shadow-light);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
 }
 
 button {
