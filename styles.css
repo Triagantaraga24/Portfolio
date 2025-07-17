@@ -652,6 +652,13 @@ body {
         inset -4px -4px 8px var(--shadow-inset-light);
 }
 
+.btn-secondary:focus:not(:active) {
+    transform: translateY(-2px);
+    box-shadow:
+        8px 8px 16px var(--shadow-dark),
+        -8px -8px 16px var(--shadow-light);
+}
+
 button {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
