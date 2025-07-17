@@ -721,7 +721,7 @@ button {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
@@ -735,6 +735,9 @@ button {
     transition: all 0.3s ease;
     outline: none !important;
     -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .achievement-item:hover {
@@ -872,7 +875,18 @@ a:focus {
         font-size: 0.9em;
         margin-right: 4px;
     }
+
+    .achievements-grid {
+        gap: 16px;
+    }
+    
+    .achievement-item {
+        padding: 16px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
 }
+    
 
 .fade-in {
     animation-delay: 0.2s;
