@@ -142,6 +142,7 @@ body {
 
 .sidebar.collapsed {
     width: 60px;
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .sidebar-logo {
@@ -183,6 +184,13 @@ body {
 .sidebar.collapsed .sidebar-logo {
     opacity: 0;
     transform: translateX(-20px);
+    transition-delay: 0.4s;
+    transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-menu {
+    margin-top: 0;
+    transition: margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sidebar-menu a {
@@ -208,6 +216,10 @@ body {
 
 .sidebar.collapsed .sidebar-menu span {
     display: none;
+}
+
+.sidebar.collapsed .sidebar-menu {
+    margin-top: -5rem;
 }
 
 .sidebar-toggle {
