@@ -435,6 +435,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    document.querySelectorAll('.btn-secondary').forEach(button => {
+        button.addEventListener('mouseup', () => {
+            button.blur();
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.blur();
+        });
+
+        button.addEventListener('click', (e) => {
+            if (button.getAttribute('href') === '#') {
+                e.preventDefault();
+                button.blur();
+            }
+        });
+    });
 });
 
 // Add parallax effect
