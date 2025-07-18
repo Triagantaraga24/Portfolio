@@ -34,6 +34,43 @@ function closeImageModal() {
     document.getElementById("imageModal").style.display = "none";
 }
 
+function setSvgFavicon(svgUrl, bgGradient = ['#667eea', '#f093fb']) {
+    const size = 64;
+    const canvas = document.createElement('canvas');
+    canvas.width = canvas.height = size;
+    const ctx = canvas.getContext('2d');
+
+    // Buat gradient
+    const gradient = ctx.createLinearGradient(0, 0, size, size);
+    gradient.addColorStop(0, bgGradient[0]);
+    gradient.addColorStop(1, bgGradient[1]);
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, size, size);
+
+    // Gambar SVG ke canvas
+    fetch(svgUrl)
+        .then(res => res.text())
+        .then(svgText => {
+            const img = new Image();
+            const svgBlob = new Blob([svgText], { type: 'image/svg+xml' });
+            const url = URL.createObjectURL(svgBlob);
+
+            img.onload = () => {
+                // Gambar SVG di tengah
+                ctx.drawImage(img, 16, 16, 32, 32);
+                URL.revokeObjectURL(url);
+
+                // Set favicon
+                const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
+                link.rel = 'icon';
+                link.type = 'image/png';
+                link.href = canvas.toDataURL('image/png');
+                document.head.appendChild(link);
+            };
+            img.src = url;
+        });
+}
+
 const translations = {
     id: {
         title: "Pengembang Web",
@@ -473,13 +510,19 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
 
-// Add parallax effect
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const parallax = document.querySelector('body');
-    const speed = scrolled * 0.5;
-
-    parallax.style.backgroundPosition = `center ${speed}px`;
+    // Jalankan saat halaman dimuat
+    window.addEventListener('load', () => {
+        console.log('Favicon script loaded');
+        setSvgFavicon('./assets/bug-solid.svg');
+    });
+    
+    // Add parallax effect
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('body');
+        const speed = scrolled * 0.5;
+    
+        parallax.style.backgroundPosition = `center ${speed}px`;
+    });   
 });
