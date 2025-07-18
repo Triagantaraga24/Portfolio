@@ -164,7 +164,6 @@ body {
     background-clip: text;
     font-size: 3.4rem;
     margin-bottom: 0.3rem;
-
 }
 
 .sidebar-logo span {
@@ -934,6 +933,14 @@ a:focus {
 
     .achievements-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    #about p, .skill-item, .experience-item {
+        font-size: 14px;
     }
     
     .achievement-item {
