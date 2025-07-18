@@ -98,7 +98,7 @@ const translations = {
         title: "Web Developer",
         address: "<i class=\"fa-solid fa-location-dot\"></i> South Tangerang",
         aboutTitle: "About Me",
-        aboutText: "I am graduate from Informatics Engineering from Mercu Buana University with a keen interest in web application development. Strong problem-solving skills, quick adaptability, and working in a timely manner. In addition, I am accustomed to thinking logistically when facing technical challenges. I have expertise in web technologies such as HTML, CSS, JavaScript, PHP, and SQL. My internship experience as a Web Developer in Tanjung Duren Selatan Subdistrict in 2023 gave me the opportunity to hone my technical skills as well as improve my skills in web application development professionally.",
+        aboutText: "I am graduate from Informatics Engineering from Mercu Buana University with a keen interest in web application development. Strong problem-solving skills, quick adaptability, and working in a timely manner. In addition, I am accustomed to thinking logistically when facing technical challenges. I have expertise in web technologies such as HTML, CSS, JavaScript, PHP, and SQL. My internship experience as a Web Developer in South Tanjung Duren Subdistrict in 2023 gave me the opportunity to hone my technical skills as well as improve my skills in web application development professionally.",
         skillsTitle: "Skills",
         skillsData: [
             { title: "HTML & CSS", desc: "Modern web structure and styling" },
@@ -199,7 +199,7 @@ function updateContent(lang) {
         if (experiences[1]) {
             experiences[1].querySelector('.experience-date').textContent = 'July 2023 – February 2024';
             experiences[1].querySelector('.experience-title').textContent = 'Web Developer Internship';
-            experiences[1].querySelector('.experience-company').textContent = 'Tanjung Duren Selatan Subdistrict ';
+            experiences[1].querySelector('.experience-company').textContent = 'South Tanjung Duren Subdistrict ';
             experiences[1].querySelector('p').textContent = 'Created and developed a district office website to facilitate access to information and public services transparently and efficiently. Improved work efficiency with an integrated platform for data management and inter-departmental coordination.';
         }
         if (experiences[2]) {
