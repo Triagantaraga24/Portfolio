@@ -583,6 +583,10 @@ body {
     outline: none !important;
 }
 
+.fa-play {
+    transform: rotate(90deg);
+}
+
 .experience-item {
     background: var(--bg-primary);
     padding: 25px;
