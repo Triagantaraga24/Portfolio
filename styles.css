@@ -584,7 +584,7 @@ body {
 }
 
 .fa-play {
-    transform: rotate(-90deg);
+    transform: rotate(270deg);
 }
 
 .experience-item {
