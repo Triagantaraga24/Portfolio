@@ -79,10 +79,10 @@ const translations = {
         aboutText: "Saya adalah lulusan Teknik Informatika dari Universitas Mercu Buana dengan minat yang mendalam pada pengembangan aplikasi web. Memiliki keterampilan yang kuat dalam pemecahan masalah, kemampuan beradaptasi dengan cepat, serta bekerja dalam tim. Selain itu, saya terbiasa berpikir logis dalam menghadapi tantangan teknis. Saya memiliki keahlian dalam teknologi web seperti HTML, CSS, JavaScript, PHP, dan SQL. Pengalaman magang saya sebagai Web Developer di Tanjung Duren Selatan pada tahun 2023 memberikan saya kesempatan untuk mengasah kemampuan teknis serta meningkatkan keterampilan dalam pengembangan aplikasi web secara profesional.",
         skillsTitle: "Keahlian",
         skillsData: [
-            { title: "HTML & CSS", desc: "Struktur dan styling web modern" },
-            { title: "JavaScript", desc: "Interaksi dinamis dan logika web" },
-            { title: "PHP", desc: "Pengembangan backend dan server" },
-            { title: "SQL", desc: "Manajemen dan query database" }
+            { title: "NextJS", desc: "Struktur dan styling web modern" },
+            { title: "Typescript", desc: "Interaksi dinamis dan logika web" },
+            { title: "NodeJS", desc: "Pengembangan backend dan server" },
+            { title: "PostgreSQL", desc: "Manajemen dan query database" }
         ],
         experienceTitle: "Pengalaman Kerja",
         collegeTitle: "Kampus",
@@ -101,10 +101,10 @@ const translations = {
         aboutText: "I am graduate from Informatics Engineering from Mercu Buana University with a keen interest in web application development. Strong problem-solving skills, quick adaptability, and working in a timely manner. In addition, I am accustomed to thinking logistically when facing technical challenges. I have expertise in web technologies such as HTML, CSS, JavaScript, PHP, and SQL. My internship experience as a Web Developer in South Tanjung Duren Subdistrict in 2023 gave me the opportunity to hone my technical skills as well as improve my skills in web application development professionally.",
         skillsTitle: "Skills",
         skillsData: [
-            { title: "HTML & CSS", desc: "Modern web structure and styling" },
-            { title: "JavaScript", desc: "Dynamic interaction and web logic" },
-            { title: "PHP", desc: "Backend and server development" },
-            { title: "SQL", desc: "Database management and queries" }
+            { title: "NextJS", desc: "Modern web structure and styling" },
+            { title: "Typescript", desc: "Dynamic interaction and web logic" },
+            { title: "NodeJS", desc: "Backend and server development" },
+            { title: "PostgreSQL", desc: "Database management and queries" }
         ],
         experienceTitle: "Work Experiences",
         collegeTitle: "College",
