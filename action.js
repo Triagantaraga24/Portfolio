@@ -250,7 +250,8 @@ function updateContent(lang) {
 
         // Update achievements content for English
         const achievementItems = document.querySelectorAll('.achievement-item');
-        if (achievementItems[0]) {
+        if (achievementItems[0]) {            
+            achievementItems[0].querySelector('.achievement-date').textContent = 'July 2022';
             achievementItems[0].querySelector('.achievement-title').textContent = 'MKBM Entrepreneurship';
             achievementItems[0].querySelector('p').textContent = 'As a recipient of the 2022 Mercu Buana University MBKM Entrepreneurship grant.';
         }
@@ -337,6 +338,7 @@ function updateContent(lang) {
         // Restore Indonesian achievements content
         const achievementItems = document.querySelectorAll('.achievement-item');
         if (achievementItems[0]) {
+            achievementItems[0].querySelector('.achievement-date').textContent = 'Juli 2022';
             achievementItems[0].querySelector('.achievement-title').textContent = 'MBKM Kewirausahaan';
             achievementItems[0].querySelector('p').textContent = 'Sebagai penerima hibah MBKM Kewirusahaan Universitas Mercu Buana tahun 2022.';
         }
