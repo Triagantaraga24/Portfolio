@@ -251,16 +251,16 @@ function updateContent(lang) {
         // Update achievements content for English
         const achievementItems = document.querySelectorAll('.achievement-item');
         if (achievementItems[0]) {
-            achievementItems[0].querySelector('.achievement-title').textContent = 'Student Entrepreneurship Development Program (P2MW)';
-            achievementItems[0].querySelector('p').textContent = 'Recipient of P2MW funding 2023 Initial Stage Digital Business Category with business name "Acaverse SIA Mobile".';
+            achievementItems[0].querySelector('.achievement-title').textContent = 'MKBM Entrepreneurship';
+            achievementItems[0].querySelector('p').textContent = 'As a recipient of the 2022 Mercu Buana University MBKM Entrepreneurship grant.';
         }
         if (achievementItems[1]) {
             achievementItems[1].querySelector('.achievement-title').textContent = 'Student Creativity Program (PKM)';
             achievementItems[1].querySelector('p').textContent = 'Recipient of PKM-AI incentive 2023 with research on K-Nearest Neighbor algorithm optimization for breast cancer prediction.';
         }
         if (achievementItems[2]) {
-            achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
-            achievementItems[2].querySelector('p').textContent = 'Participant in Gemastik XV User Experience Design field 2022.';
+            achievementItems[2].querySelector('.achievement-title').textContent = 'Student Entrepreneurship Development Program (P2MW)';
+            achievementItems[2].querySelector('p').textContent = 'Recipient of P2MW funding 2023 Initial Stage Digital Business Category with business name "Acaverse SIA Mobile".';
         }
         if (achievementItems[3]) {
             achievementItems[3].querySelector('.achievement-title').textContent = 'Student Creativity Program (PKM)';
@@ -337,16 +337,16 @@ function updateContent(lang) {
         // Restore Indonesian achievements content
         const achievementItems = document.querySelectorAll('.achievement-item');
         if (achievementItems[0]) {
-            achievementItems[0].querySelector('.achievement-title').textContent = 'Program Pembinaan Mahasiswa Wirausaha (P2MW)';
-            achievementItems[0].querySelector('p').textContent = 'Peraih pendanaan P2MW Tahun 2023 Tahapan Awal Kategori Bisnis Digital dengan nama usaha "Acaverse SIA Mobile".';
+            achievementItems[0].querySelector('.achievement-title').textContent = 'MBKM Kewirausahaan';
+            achievementItems[0].querySelector('p').textContent = 'Sebagai penerima hibah MBKM Kewirusahaan Universitas Mercu Buana tahun 2022.';
         }
         if (achievementItems[1]) {
             achievementItems[1].querySelector('.achievement-title').textContent = 'Program Kreativitas Mahasiswa (PKM)';
             achievementItems[1].querySelector('p').textContent = 'Peraih insentif bidang PKM-AI Tahun 2023 dengan penelitian tentang optimalisasi algoritma K-Nearest Neighbor untuk prediksi kanker payudara.';
         }
         if (achievementItems[2]) {
-            achievementItems[2].querySelector('.achievement-title').textContent = 'Gemastik XV';
-            achievementItems[2].querySelector('p').textContent = 'Peserta Gemastik XV bidang Desain Pengalaman Pengguna tahun 2022.';
+            achievementItems[2].querySelector('.achievement-title').textContent = 'Program Pembinaan Mahasiswa Wirausaha (P2MW)';
+            achievementItems[2].querySelector('p').textContent = 'Peraih pendanaan P2MW Tahun 2023 Tahapan Awal Kategori Bisnis Digital dengan nama usaha "Acaverse SIA Mobile".';
         }
         if (achievementItems[3]) {
             achievementItems[3].querySelector('.achievement-title').textContent = 'Program Kreativitas Mahasiswa (PKM)';
