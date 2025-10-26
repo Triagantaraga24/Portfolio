@@ -83,7 +83,8 @@ const translations = {
             { title: "Typescript", desc: "Interaksi dinamis dan logika web" },
             { title: "NodeJS", desc: "Pengembangan backend dan server" },
             { title: "Rust", desc: "Pengembangan software secara efisien" },
-            { title: "PostgreSQL", desc: "Manajemen dan query database" }
+            { title: "PostgreSQL", desc: "Manajemen dan query database berbasis SQL" }
+            { title: "MongoDB", desc: "Manajemen dan query database berbasis NoSQL" }
         ],
         experienceTitle: "Pengalaman Kerja",
         collegeTitle: "Kampus",
@@ -106,7 +107,8 @@ const translations = {
             { title: "Typescript", desc: "Dynamic interaction and web logic" },
             { title: "NodeJS", desc: "Backend and server development" },
             { title: "Rust", desc: "Efficient software development" },
-            { title: "PostgreSQL", desc: "Database management and queries" }
+            { title: "PostgreSQL", desc: "SQL-based database management and querying" }
+            { title: "PostgreSQL", desc: "NoSQL-based database management and query" }
         ],
         experienceTitle: "Work Experiences",
         collegeTitle: "College",
@@ -148,7 +150,7 @@ function updateContent(lang) {
     document.querySelector('.glass-card:nth-child(2) p').textContent = content.aboutText;
 
     // Update skills section
-    document.querySelector('.glass-card:nth-child(4) .section-title').textContent = content.skillsTitle;
+    document.querySelector('.glass-card:nth-child(5) .section-title').textContent = content.skillsTitle;
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach((item, index) => {
         if (content.skillsData[index]) {
@@ -530,5 +532,6 @@ document.addEventListener('DOMContentLoaded', () => {
         parallax.style.backgroundPosition = `center ${speed}px`;
     });   
 });
+
 
 
