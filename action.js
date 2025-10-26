@@ -83,7 +83,7 @@ const translations = {
             { title: "Typescript", desc: "Interaksi dinamis dan logika web" },
             { title: "NodeJS", desc: "Pengembangan backend dan server" },
             { title: "Rust", desc: "Pengembangan software secara efisien" },
-            { title: "PostgreSQL", desc: "Manajemen dan query database berbasis SQL" }
+            { title: "PostgreSQL", desc: "Manajemen dan query database berbasis SQL" },
             { title: "MongoDB", desc: "Manajemen dan query database berbasis NoSQL" }
         ],
         experienceTitle: "Pengalaman Kerja",
@@ -107,7 +107,7 @@ const translations = {
             { title: "Typescript", desc: "Dynamic interaction and web logic" },
             { title: "NodeJS", desc: "Backend and server development" },
             { title: "Rust", desc: "Efficient software development" },
-            { title: "PostgreSQL", desc: "SQL-based database management and querying" }
+            { title: "PostgreSQL", desc: "SQL-based database management and querying" },
             { title: "MongoDB", desc: "NoSQL-based database management and query" }
         ],
         experienceTitle: "Work Experiences",
@@ -532,6 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
         parallax.style.backgroundPosition = `center ${speed}px`;
     });   
 });
+
 
 
 
