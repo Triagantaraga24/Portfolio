@@ -108,7 +108,7 @@ const translations = {
             { title: "NodeJS", desc: "Backend and server development" },
             { title: "Rust", desc: "Efficient software development" },
             { title: "PostgreSQL", desc: "SQL-based database management and querying" }
-            { title: "PostgreSQL", desc: "NoSQL-based database management and query" }
+            { title: "MongoDB", desc: "NoSQL-based database management and query" }
         ],
         experienceTitle: "Work Experiences",
         collegeTitle: "College",
@@ -532,6 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
         parallax.style.backgroundPosition = `center ${speed}px`;
     });   
 });
+
 
 
 
