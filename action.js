@@ -150,7 +150,7 @@ function updateContent(lang) {
     document.querySelector('.glass-card:nth-child(2) p').textContent = content.aboutText;
 
     // Update skills section
-    document.querySelector('.glass-card:nth-child(5) .section-title').textContent = content.skillsTitle;
+    document.querySelector('.glass-card:nth-child(3) .section-title').textContent = content.skillsTitle;
     const skillItems = document.querySelectorAll('.skill-item');
     skillItems.forEach((item, index) => {
         if (content.skillsData[index]) {
@@ -538,3 +538,4 @@ const languageToggle = document.getElementById('language-toggle');
 if (languageToggle) {
     languageToggle.addEventListener('click', toggleLanguage);
 }
+
