@@ -533,7 +533,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });   
 });
 
-
-
-
-
+// Event listener untuk tombol toggle bahasa
+const languageToggle = document.getElementById('language-toggle');
+if (languageToggle) {
+    languageToggle.addEventListener('click', toggleLanguage);
+}
