@@ -94,7 +94,8 @@ const translations = {
         socialTitle: "Koneksi Sosial",
         contactBtn: "Hubungi Saya",
         downloadBtn: "<i class=\"fa-solid fa-circle-down\"></i> Unduh CV",
-        cvFile: "./assets/CV_RagaTriagantara.pdf"
+        cvFile: "./assets/CV_RagaTriagantara.pdf",
+        copyright: "&copy; 2025 Raga Triagantara. Hak Cipta Dilindungi."
     },
     en: {
         title: "Web Developer",
@@ -118,7 +119,8 @@ const translations = {
         socialTitle: "Social Connections",
         contactBtn: "Contact Me",
         downloadBtn: "<i class=\"fa-solid fa-circle-down\"></i> Download CV",
-        cvFile: "./assets/CV_RagaTriagantara_EN.pdf"
+        cvFile: "./assets/CV_RagaTriagantara_EN.pdf",
+        copyright: "&copy; 2025 Raga Triagantara. All Rights Reserved."
     }
 };
 
@@ -170,6 +172,9 @@ function updateContent(lang) {
     // Update buttons
     document.querySelector('.btn-primary').textContent = content.contactBtn;
     document.querySelector('.btn-secondary').innerHTML = content.downloadBtn;
+
+     // Update copyright
+    document.querySelector('.copyright p').innerHTML = content.copyright;
 
     // === Sidebar Items ===
     const sidebarItems = [
@@ -538,4 +543,5 @@ const languageToggle = document.getElementById('language-toggle');
 if (languageToggle) {
     languageToggle.addEventListener('click', toggleLanguage);
 }
+
 
