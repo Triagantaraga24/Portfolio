@@ -978,3 +978,32 @@ a:focus {
 .fade-in-6 {
     animation-delay: 1.2s;
 }
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.copyright p {
+    margin: 0;
+}
+
+/* Responsive Copyright */
+@media (max-width: 768px) {
+    .copyright {
+        padding: 15px 10px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 400px) {
+    .copyright {
+        padding: 12px 8px;
+        font-size: 0.75em;
+    }
+}
