@@ -82,6 +82,7 @@ const translations = {
             { title: "NextJS", desc: "Struktur dan styling web modern" },
             { title: "Typescript", desc: "Interaksi dinamis dan logika web" },
             { title: "NodeJS", desc: "Pengembangan backend dan server" },
+            { title: "Rust", desc: "Pengembangan software secara efisien" },
             { title: "PostgreSQL", desc: "Manajemen dan query database" }
         ],
         experienceTitle: "Pengalaman Kerja",
@@ -104,6 +105,7 @@ const translations = {
             { title: "NextJS", desc: "Modern web structure and styling" },
             { title: "Typescript", desc: "Dynamic interaction and web logic" },
             { title: "NodeJS", desc: "Backend and server development" },
+            { title: "Rust", desc: "Efficient software development" },
             { title: "PostgreSQL", desc: "Database management and queries" }
         ],
         experienceTitle: "Work Experiences",
@@ -528,3 +530,4 @@ document.addEventListener('DOMContentLoaded', () => {
         parallax.style.backgroundPosition = `center ${speed}px`;
     });   
 });
+
