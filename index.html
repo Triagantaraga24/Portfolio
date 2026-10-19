@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8ff">
+  <meta name="description" content="Portofolio profesional Raga Triagantara — Web Developer.">
+  <meta property="og:title" content="Raga Triagantara — Portfolio">
+  <meta property="og:description" content="Personal portfolio of Raga Triagantara.">
+  <meta property="og:type" content="website">
+  <title>Raga Triagantara — Portfolio</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="skip">Lewati ke konten</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="brand" href="#home" aria-label="Raga Triagantara home">
+        <span class="brand-mark" aria-hidden="true">RT</span>
+        <span class="brand-name">Raga<span class="brand-dot">.</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#about" data-i18n="navAbout">Tentang</a>
+        <a href="#skills" data-i18n="navSkills">Keahlian</a>
+        <a href="#journey" data-i18n="navJourney">Perjalanan</a>
+        <a href="#projects" data-i18n="navProjects">Proyek</a>
+        <a href="#contact" data-i18n="navContact">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button language-toggle" id="language-toggle" type="button" aria-label="Switch language" title="Switch language">EN</button>
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme"><span id="theme-icon" aria-hidden="true">☾</span></button>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="sync-strip" role="status" aria-live="polite">
+    <div class="wrap sync-inner"><span class="sync-dot" id="sync-dot"></span><span id="sync-label" data-i18n="loading">Memuat data portofolio…</span><span class="sync-time" id="sync-time"></span><button class="text-button" id="retry-button" type="button" hidden data-i18n="retry">Coba lagi</button></div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">PORTOFOLIO PERSONAL</span></p>
+          <h1><span data-i18n="hello">Halo, saya</span><br><span class="gradient-text" id="profile-name">Raga Triagantara</span></h1>
+          <p class="hero-role" id="profile-title">Web Developer</p>
+          <p class="hero-summary" id="profile-summary">Memuat ringkasan profil…</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><span data-i18n="exploreProjects">Jelajahi Proyek</span><span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#contact" data-i18n="contactMe">Hubungi Saya</a><div class="cv-actions" id="cv-actions"></div>
+          </div>
+          <div class="hero-meta"><span class="meta-icon" aria-hidden="true">⌖</span><span id="profile-location">Tangerang Selatan, Indonesia</span><span class="meta-divider"></span><span data-i18n="openToIdeas">Terbuka untuk ide dan kolaborasi</span></div>
+        </div>
+        <div class="hero-visual" aria-label="Profile card">
+          <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+          <div class="visual-spark spark-one">✳</div><div class="visual-spark spark-two">✦</div>
+          <div class="profile-card">
+            <div class="profile-card-top"><span class="window-dots"><i></i><i></i><i></i></span><span class="mono-label">PROFILE / 001</span></div>
+            <div class="avatar-wrap"><div class="avatar-initials" id="avatar-initials" aria-hidden="true">RT</div><img id="profile-photo" alt="Foto profil Raga Triagantara" hidden loading="lazy"></div>
+            <div class="profile-card-name" id="card-profile-name">Raga Triagantara</div>
+            <div class="profile-card-role" id="card-profile-title">Web Developer</div>
+            <div class="profile-card-bottom"><span><span class="status-pip"></span><span data-i18n="portfolioLive">Portfolio online</span></span><span class="mono-label">IDN · 2026</span></div>
+          </div>
+          <div class="floating-chip chip-code"><span class="chip-symbol">{ }</span><span>Vanilla JS</span></div>
+          <div class="floating-chip chip-design"><span class="chip-symbol">✧</span><span>Creative thinking</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom wrap"><span data-i18n="scrollToExplore">GULIR UNTUK MENJELAJAH</span><span class="scroll-line"></span><span class="mono-label">01 — 05</span></div>
+    </section>
+
+    <section class="section section-soft" id="about">
+      <div class="wrap">
+        <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span>01 / <span data-i18n="aboutEyebrow">TENTANG SAYA</span></p><h2 data-i18n="aboutTitle">Membangun sesuatu <span class="gradient-text">yang bermakna.</span></h2></div><p class="section-lead" data-i18n="aboutLead">Ruang singkat untuk mengenal latar belakang, cara berpikir, dan hal yang sedang saya eksplorasi.</p></div>
+        <div class="about-grid"><div class="about-mark" aria-hidden="true"><span>RT</span><i>✦</i></div><div class="about-content"><p class="body-large" id="about-summary">Ringkasan profil akan ditampilkan di sini setelah dilengkapi melalui dashboard admin.</p><div class="profile-facts"><div class="fact"><span class="fact-label" data-i18n="location">LOKASI</span><strong id="fact-location">Tangerang Selatan, Indonesia</strong></div><div class="fact"><span class="fact-label" data-i18n="email">EMAIL</span><a id="fact-email" href="mailto:ragatriagantara@gmail.com">ragatriagantara@gmail.com</a></div><div class="fact"><span class="fact-label" data-i18n="phone">TELEPON</span><a id="fact-phone" href="tel:+6282218930675">+62-822-1893-0675</a></div></div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span>02 / <span data-i18n="skillsEyebrow">KEAHLIAN</span></p><h2 data-i18n="skillsTitle">Tools untuk <span class="gradient-text">mewujudkan ide.</span></h2></div><p class="section-lead" data-i18n="skillsLead">Keahlian dan teknologi yang tercantum di sini bersumber dari data portofolio.</p></div><div id="skills-container" class="skills-groups"><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div></div></div>
+    </section>
+
+    <section class="section section-soft" id="journey">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span>03 / <span data-i18n="journeyEyebrow">PERJALANAN</span></p><h2 data-i18n="journeyTitle">Belajar, bertumbuh, <span class="gradient-text">berkontribusi.</span></h2></div><p class="section-lead" data-i18n="journeyLead">Pengalaman, pendidikan, dan organisasi yang akan ditampilkan setelah data terverifikasi ditambahkan.</p></div>
+        <div class="journey-grid"><div><div class="subsection-heading"><span class="subsection-icon">↗</span><h3 data-i18n="experienceTitle">Pengalaman</h3></div><div class="timeline" id="experiences-container"><div class="skeleton skeleton-card"></div></div></div><div><div class="subsection-heading"><span class="subsection-icon">⌂</span><h3 data-i18n="educationTitle">Pendidikan</h3></div><div class="stack-cards" id="education-container"><div class="skeleton skeleton-card"></div></div><div class="subsection-heading subsection-spaced"><span class="subsection-icon">◎</span><h3 data-i18n="organizationsTitle">Organisasi</h3></div><div class="stack-cards" id="organizations-container"><div class="skeleton skeleton-card"></div></div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span>04 / <span data-i18n="achievementsEyebrow">PENCAPAIAN</span></p><h2 data-i18n="achievementsTitle">Hal kecil, <span class="gradient-text">progres nyata.</span></h2></div><p class="section-lead" data-i18n="achievementsLead">Sertifikat dan pencapaian yang ditambahkan melalui dashboard admin.</p></div><div class="achievement-grid" id="achievements-container"><div class="skeleton skeleton-card"></div><div class="skeleton skeleton-card"></div></div></div>
+    </section>
+
+    <section class="section section-soft" id="projects">
+      <div class="wrap"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span>05 / <span data-i18n="projectsEyebrow">KARYA TERPILIH</span></p><h2 data-i18n="projectsTitle">Ide yang menjadi <span class="gradient-text">karya.</span></h2></div><p class="section-lead" data-i18n="projectsLead">Cari dan saring proyek berdasarkan nama atau teknologi yang digunakan.</p></div>
+        <div class="project-toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Cari proyek atau teknologi…" aria-label="Search projects"><kbd>⌘ K</kbd></label><div class="project-filters" id="project-filters" aria-label="Project technology filters"></div></div>
+        <div class="project-grid" id="projects-container"><div class="skeleton skeleton-project"></div><div class="skeleton skeleton-project"></div><div class="skeleton skeleton-project"></div></div><p class="project-count" id="project-count"></p>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="wrap contact-panel"><div class="contact-decoration" aria-hidden="true"><span></span><span></span><span></span></div><div class="contact-copy"><p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="contactEyebrow">MARI TERHUBUNG</span></p><h2 data-i18n="contactTitle">Punya ide menarik?<br><span class="gradient-text">Mari wujudkan bersama.</span></h2><p data-i18n="contactLead">Untuk pertanyaan, diskusi, atau peluang kolaborasi, silakan hubungi saya melalui kanal berikut.</p><a class="button button-light" id="contact-email-button" href="mailto:ragatriagantara@gmail.com"><span data-i18n="sendEmail">Kirim Email</span><span aria-hidden="true">↗</span></a></div><div class="contact-links"><div class="contact-detail"><span class="contact-detail-icon">@</span><div><span class="fact-label" data-i18n="email">EMAIL</span><a id="contact-email" href="mailto:ragatriagantara@gmail.com">ragatriagantara@gmail.com</a></div></div><div class="contact-detail"><span class="contact-detail-icon">⌖</span><div><span class="fact-label" data-i18n="location">LOKASI</span><strong id="contact-location">Tangerang Selatan, Indonesia</strong></div></div><div class="social-list" id="social-links"></div></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">RT</span><span class="brand-name">Raga<span class="brand-dot">.</span></span></a><p>© <span id="current-year">2026</span> Raga Triagantara. <span data-i18n="footerRights">Dibuat dengan tujuan dan rasa ingin tahu.</span></p><a class="back-top" href="#home" aria-label="Back to top">↑</a></div></footer>
+
+  <div class="error-banner" id="error-banner" role="alert" hidden><div class="wrap error-banner-inner"><span class="error-icon">!</span><div><strong data-i18n="loadError">Data belum berhasil dimuat.</strong><p id="error-message" data-i18n="loadErrorDetail">Periksa koneksi dan coba lagi.</p></div><button type="button" class="button button-small" id="error-retry" data-i18n="retry">Coba lagi</button></div></div>
+
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="dialog-close" aria-label="Close project details">×</button></form><div id="project-dialog-content"></div></dialog>
+</body>
+</html>
